@@ -30,7 +30,7 @@ Utilizaremos este `package.json` básico para empezar a trabajar
 
 ```
 {
-  "name": "imagesFavApp",
+  "name": "starter-project",
   "version": "1.0.0",
   "description": "## Packages Webpack",
   "main": "index.js",
@@ -45,7 +45,8 @@ Utilizaremos este `package.json` básico para empezar a trabajar
     "html-webpack-plugin": "^2.30.1",
     "rimraf": "^2.6.2",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.4"
+    "webpack-dev-server": "^2.9.4",
+    "webpack-cli": "^3.2.1"
   }
 }
 ```
@@ -56,6 +57,8 @@ Las dependencias instaladas son:
 - [`rimraf`](https://github.com/isaacs/rimraf) → Para eliminar archivos desde node (lo utilizamos en los _scripts_ del `package.json`)
 - [`webpack`](https://github.com/webpack/webpack) → El _bundler_ de módulos que utilizaremos. Nos permite manejar todas nuestras dependencias desde JS y se encarga de generar un `bundle.js` final con todo (lo utilizamos en los _scripts_ del `package.json`)
 - [`webpack-dev-server`](https://github.com/webpack/webpack-dev-server) → Sirve una app webpack y actualiza el navegador cuando detecta cambios en los archivos (lo utilizamos en los _scripts_ del `package.json`)
+- [`webpack-cli`](https://github.com/webpack/webpack-cli) → Proporciona el comando `webpack` para poder utilizarlo desde linea de comandos (o en los _scripts_ del `package.json`)
+
 
 
 ### `webpack.config.js` básico
@@ -73,7 +76,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js"
   },
-  plugins: [new HtmlWebpackPlugin({ template: "./src/public/index.html" })],
+  new HtmlWebpackPlugin({ template: './src/index.html' }),
   devServer: {
     contentBase: "./src/public"
   }
@@ -86,9 +89,33 @@ Las propiedades configuradas son:
 - [`plugins`](https://webpack.js.org/concepts/#plugins) → Los plugins de webpack que aplicamos al generar nuestro _bundle_
 - [`devServer`](https://webpack.js.org/configuration/dev-server/#devserver) → La ruta desde la cual arrancará nuestro servidor local (y donde estatá nuestro `index.html`)
 
+Añadimos también un `index.html` base en `src`
+
+```
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title Page</title>
+  </head>
+  <body>
+
+  </body>
+</html>
+
+```
+
+
 ### `webpack.config.js` preparado para carga de módulos JS ES2015
 
-Instalamos los modulos que necesitamos con `npm i -S babel-core babel-loader`
+Instalamos los modulos que necesitamos con 
+```
+npm i -S  \
+  @babel/core \
+  babel-loader
+```
 
 Añadimos la propiedad [`module`](https://webpack.js.org/configuration/module/) para definir las [`rules`](https://webpack.js.org/configuration/module/#module-rules) con las que configuraremos diferentes [_loaders_](https://webpack.js.org/loaders/) para diferentes tipos de assets
 
@@ -106,23 +133,33 @@ module: {
 }
 ```
 
-------
-
 ## Webpack: CSS con Webpack y StandardJS con prettier en Visual Code
 
-En esta lección añadiremos más loaders (css y html) y configuraremos webpack para que genere un `styles.css` aparte para nuestros css cargados mediante webpack
+Ahora vamos a añador más loaders (css y html) y a configurar webpack para que genere un `styles.css` aparte para nuestros css cargados mediante webpack
 
 Además configuraremos nuestro proyecto y el editor [Visual Code](https://code.visualstudio.com/) (que te recomiendo) para que nos chequee y nos aplique automáticamente un standard de formato de código javascript muy popular llamando [StandardJS](https://standardjs.com/)
 
 ### Añadiendo Loaders para cargar CSS/HTML desde JS
 
-Instalamos los modulos que necesitamos con `npm i -S css-loader raw-loader style-loader extract-text-webpack-plugin`
+Instalamos los modulos que necesitamos con 
+
+```bash
+npm i -S \
+  css-loader \
+  raw-loader \
+  style-loader \
+  extract-text-webpack-plugin
+```
 
 Añadimos las nuevas `rules` con su respectiva configuración de `loaders` y nuevos plugins. 
 
 **`webpack.config.js`**
 
 ```
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
+...
+
 module: {
   rules: [
     {
@@ -144,7 +181,7 @@ module: {
   ]
 },
 plugins: [
-  new HtmlWebpackPlugin({ template: "./src/public/index.html" }),
+  new HtmlWebpackPlugin({ template: "./src/index.html" }),
   new ExtractTextPlugin("styles.css")
 ],
 ```
@@ -152,7 +189,7 @@ plugins: [
 
 Los loaders añadidos son:
 - [`style-loader`](https://github.com/webpack-contrib/style-loader) y [`css-loader`](https://github.com/webpack-contrib/css-loader) → Para poder cargar _css_ desde _javascript_
-- [`raw-loader`](https://github.com/webpack-contrib/raw-loader) → Para cargar archivos de texto (en nuestro caso lo utilizamos para cargar el contenido de `.html` externos)
+- [`raw-loader`](https://github.com/webpack-contrib/raw-loader) → Para cargar archivos de texto (por ejemplo para cargar el contenido de `.html` externos)
 
 El plugin añadido es:
 - [`extract-text-webpack-plugin`](https://github.com/webpack-contrib/extract-text-webpack-plugin) → Nos permite extraer parte del _bundle_ en un archivo aparte (lo utilizaremos para separar los css en un `styles.css` aparte)
@@ -162,9 +199,11 @@ El plugin añadido es:
 
 [Babel](https://babeljs.io/) es la herramienta que utilizamos para _transpilar_ (traducir un código a otro código) código ES2015 a ES5. Cómo hay muchas features del lenguaje propuestas que aún no forman parte del standard, se utilizan los llamados [_presets_ y _plugins_](https://babeljs.io/docs/plugins/) para [indicar a nuestro babel](https://www.fullstackreact.com/articles/what-are-babel-plugins-and-presets/) qué tipo de características de JS queremos utilizar en nuestro proyecto.
 
-En nuestro caso le vamos a indicar que queremos soporte completo a ES2015 (ES6) mediante el preset [`es2015`](https://babeljs.io/docs/plugins/preset-es2015/) y  algunas caracteristicas propuestas que estan en fase "borrador" disponibles a través del preset [`stage-2`](https://babeljs.io/docs/plugins/preset-stage-2/)
+En nuestro caso le vamos a indicar que queremos soporte completo a ES2015 (ES6) mediante el preset [`preset-env`](https://babeljs.io/docs/en/babel-preset-env) que determina que plugins y pollyfils son necesarios en base a los _browsers_ configurados. 
 
-Asi que instalamos nuestos modulos con `npm i -S babel-preset-es2015 babel-preset-stage-2`
+Sin ninguna configuración, este preset se comporta igual que [`babel-preset-latest`](https://babeljs.io/docs/en/babel-preset-latest) (o lo que es lo mismo, que [`babel-preset-es2015`](https://babeljs.io/docs/en/babel-preset-es2015), [`babel-preset-es2016`](https://babeljs.io/docs/en/babel-preset-es2016), and [`babel-preset-es2017`](https://babeljs.io/docs/en/babel-preset-es2017) juntos)
+
+Asi que instalamos este módulo con `npm i -S @babel/preset-env`
 
 Y creamos un archivos `.babelrc` con el que le indicamos a babel qué caracteristicas de Javascript queremos utilizar en nuestro proyecto
 
@@ -172,7 +211,7 @@ Y creamos un archivos `.babelrc` con el que le indicamos a babel qué caracteris
 
 ```
 {
-  "presets": [ "es2015", "stage-2" ]
+  "presets": ["@babel/preset-env"]
 }
 ```
 
@@ -211,4 +250,40 @@ Y añadimos la configuración correspondiente en Visual Code desde `User Setting
   "prettier.eslintIntegration": true
   ...
 }
+```
+
+## Extras
+
+### `script-ext-html-webpack-plugin`
+
+Podemos instalar [`script-ext-html-webpack-plugin`](https://github.com/numical/script-ext-html-webpack-plugin) para mejora el plugin `html-webpack-plugin` y especificar atributos (como `defer`) al tag `<script>` de carga del _bundle_ (lo utilizamos en el `webpack.config.js`)
+
+Lo instalamos con `npm i -D script-ext-html-webpack-plugin`
+Y lo añadimos a `plugins` en nuestro `webpack.config.js`
+
+```
+ plugins: [
+        ...,
+        new ScriptExtHtmlWebpackPlugin({
+            defaultAttribute: 'defer'
+        })
+    ],
+```
+
+### Añadir source maps 
+
+También podemos configurar nuestro `webpack.config.js` para añadir _source maps_ con [`devtool`](https://webpack.js.org/configuration/devtool/)
+
+Así cuando pongamos `debugger` veremos nuestro código original y no el transpilado por babel
+
+```
+module.exports = {
+  entry: ...,
+  output: ...,
+  module: ...,
+  plugins: ...,
+  ...
+  devtool: 'source-map'
+}
+
 ```
