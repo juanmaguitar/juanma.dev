@@ -199,11 +199,13 @@ El plugin añadido es:
 
 [Babel](https://babeljs.io/) es la herramienta que utilizamos para _transpilar_ (traducir un código a otro código) código ES2015 a ES5. Cómo hay muchas features del lenguaje propuestas que aún no forman parte del standard, se utilizan los llamados [_presets_ y _plugins_](https://babeljs.io/docs/plugins/) para [indicar a nuestro babel](https://www.fullstackreact.com/articles/what-are-babel-plugins-and-presets/) qué tipo de características de JS queremos utilizar en nuestro proyecto.
 
-En nuestro caso le vamos a indicar que queremos soporte completo a ES2015 (ES6) mediante el preset [`preset-env`](https://babeljs.io/docs/en/babel-preset-env) que determina que plugins y pollyfils son necesarios en base a los _browsers_ configurados. 
+La última versión de Babel (la `7`) ya trae [un montón de novedades](https://babeljs.io/blog/2018/08/27/7.0.0#tc39-proposals-https-githubcom-tc39-proposals-support) 
+
+Además, vamos a añadir el preset [`preset-env`](https://babeljs.io/docs/en/babel-preset-env) que permite optimizar el código genrado por babel en base a los _browsers_ "target". 
 
 Sin ninguna configuración, este preset se comporta igual que [`babel-preset-latest`](https://babeljs.io/docs/en/babel-preset-latest) (o lo que es lo mismo, que [`babel-preset-es2015`](https://babeljs.io/docs/en/babel-preset-es2015), [`babel-preset-es2016`](https://babeljs.io/docs/en/babel-preset-es2016), and [`babel-preset-es2017`](https://babeljs.io/docs/en/babel-preset-es2017) juntos)
 
-Asi que instalamos este módulo con `npm i -S @babel/preset-env`
+Así que instalamos este módulo con `npm i -S @babel/preset-env`
 
 Y creamos un archivos `.babelrc` con el que le indicamos a babel qué caracteristicas de Javascript queremos utilizar en nuestro proyecto
 
