@@ -1,5 +1,5 @@
 ---
-title: "Cómo configurar nuestros proyectos para trabajar con Webpack, Babel, ESLint y Prettier"
+title: "Cómo configurar nuestros proyectos para trabajar con Webpack, Babel 7, ESLint y Prettier"
 date: "2019-01-26T22:12:03.284Z"
 layout: post
 draft: false
@@ -8,9 +8,9 @@ category: "webpack"
 tags:
   - webpack
   - eslint
-  - babel
+  - babel 7
   - prettier
-description: "Cómo configurar nuestros proyectos para trabajar con Webpack, Babel, ESLint y Prettier"
+description: "Cómo configurar nuestros proyectos para trabajar con Webpack, Babel 7, ESLint y Prettier"
 ---
 
 # Webpack
