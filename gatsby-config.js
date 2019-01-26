@@ -6,7 +6,7 @@ module.exports = {
     url: 'https://apuntesjs.es/',
     title: 'Apuntes de JS',
     subtitle:
-      'Hola, soy JuanMa! En este blog iré compartiendo notas y descubrimientos relacionados con Javascript',
+      'Hola, soy JuanMa! <a target="_blank" href="https://www.linkedin.com/in/juanmagarrido/">Remote Javascript Full Stack Developer & Trainer</a> En este blog iré compartiendo notas y descubrimientos relacionados con Javascript',
     copyright: '© All rights reserved.',
     disqusShortname: '',
     menu: [
