@@ -3,10 +3,10 @@ const pxtorem = require('postcss-pxtorem')
 
 module.exports = {
   siteMetadata: {
-    url: 'https://lumen.netlify.com',
-    title: 'Blog by John Doe',
+    url: 'https://apuntesjs.es/',
+    title: 'Apuntes de JS',
     subtitle:
-      'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+      'Hola, soy JuanMa! En este blog iré compartiendo notas y descubrimientos relacionados con Javascript',
     copyright: '© All rights reserved.',
     disqusShortname: '',
     menu: [
@@ -24,13 +24,9 @@ module.exports = {
       },
     ],
     author: {
-      name: 'John Doe',
-      email: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
-      rss: '#',
-      vk: '#',
+      name: 'Apuntes de JS',
+      twitter: 'juanmaguitar',
+      github: 'juanmaguitar'
     },
   },
   plugins: [
