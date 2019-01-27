@@ -199,7 +199,7 @@ El plugin añadido es:
 
 [Babel](https://babeljs.io/) es la herramienta que utilizamos para _transpilar_ (traducir un código a otro código) código ES2015 a ES5. Cómo hay muchas features del lenguaje propuestas que aún no forman parte del standard, se utilizan los llamados [_presets_ y _plugins_](https://babeljs.io/docs/plugins/) para [indicar a nuestro babel](https://www.fullstackreact.com/articles/what-are-babel-plugins-and-presets/) qué tipo de características de JS queremos utilizar en nuestro proyecto.
 
-La última versión de Babel (la `7`) ya trae [un montón de novedades](https://babeljs.io/blog/2018/08/27/7.0.0#tc39-proposals-https-githubcom-tc39-proposals-support) 
+La última versión de Babel (la `7`) ya trae [un montón de novedades](https://babeljs.io/blog/2018/08/27/7.0.0) 
 
 Además, vamos a añadir el preset [`preset-env`](https://babeljs.io/docs/en/babel-preset-env) que permite optimizar el código genrado por babel en base a los _browsers_ "target". 
 
