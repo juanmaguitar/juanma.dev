@@ -53,7 +53,7 @@ Utilizaremos este `package.json` básico para empezar a trabajar
 
 Las dependencias instaladas son:
 
-- [`html-webpack-plugin`](https://github.com/jantimon/html-webpack-plugin) → Nos permite añadir automaticamente el _bundle_ creado con _webpack_ a un `.html` (lo utilizamos en el `webpack.config.js`)
+- [`html-webpack-plugin`](https://github.com/jantimon/html-webpack-plugin) → Nos permite añadir automáticamente el _bundle_ creado con _webpack_ a un `.html` (lo utilizamos en el `webpack.config.js`)
 - [`rimraf`](https://github.com/isaacs/rimraf) → Para eliminar archivos desde node (lo utilizamos en los _scripts_ del `package.json`)
 - [`webpack`](https://github.com/webpack/webpack) → El _bundler_ de módulos que utilizaremos. Nos permite manejar todas nuestras dependencias desde JS y se encarga de generar un `bundle.js` final con todo (lo utilizamos en los _scripts_ del `package.json`)
 - [`webpack-dev-server`](https://github.com/webpack/webpack-dev-server) → Sirve una app webpack y actualiza el navegador cuando detecta cambios en los archivos (lo utilizamos en los _scripts_ del `package.json`)
@@ -110,7 +110,7 @@ Añadimos también un `index.html` base en `src`
 
 ### `webpack.config.js` preparado para carga de módulos JS ES2015
 
-Instalamos los modulos que necesitamos con 
+Instalamos los módulos que necesitamos con 
 ```
 npm i -S  \
   @babel/core \
@@ -135,13 +135,13 @@ module: {
 
 ## Webpack: CSS con Webpack y StandardJS con prettier en Visual Code
 
-Ahora vamos a añador más loaders (css y html) y a configurar webpack para que genere un `styles.css` aparte para nuestros css cargados mediante webpack
+Ahora vamos a añadir más loaders (css y html) y a configurar webpack para que genere un `styles.css` aparte para nuestros css cargados mediante webpack
 
 Además configuraremos nuestro proyecto y el editor [Visual Code](https://code.visualstudio.com/) (que te recomiendo) para que nos chequee y nos aplique automáticamente un standard de formato de código javascript muy popular llamando [StandardJS](https://standardjs.com/)
 
 ### Añadiendo Loaders para cargar CSS/HTML desde JS
 
-Instalamos los modulos que necesitamos con 
+Instalamos los módulos que necesitamos con 
 
 ```bash
 npm i -S \
@@ -219,18 +219,25 @@ Y creamos un archivos `.babelrc` con el que le indicamos a babel qué caracteris
 
 ### Configurando `eslint` & `prettier` con Visual Code para aplicación automática de `javascript standard`
 
-[ESLint](https://eslint.org/) es un "chequeador" de estilos que podemos aplicar a nuestro workflow de manera que podamos comprobar automaticamente si nuestro código sigue una determinada guia de estilos
+[ESLint](https://eslint.org/) es un "chequeador" de estilos que podemos aplicar a nuestro workflow de manera que podamos comprobar automáticamente si nuestro código sigue una determinada guía de estilos
 
-Las normas (normalmente predefinidas ya en modulos NPM) que queremos que cumpla nuestro código las podemos definir en un `.eslintrc` que utilizará eslint para chequear nuestro código
+Las normas (normalmente predefinidas ya en módulos NPM) que queremos que cumpla nuestro código las podemos definir en un `.eslintrc` que utilizará eslint para chequear nuestro código
 
 En nuestro caso vamos a indicarle a eslint que tenga en cuenta las configuraciones de babel y que además chequee que nuestro código sigue el estilo [standardJS](https://standardjs.com/) 
 
-Para aplicar este check automaticamente instalamos un formateador de código llamado [prettier](https://prettier.io/) a través del cual podremos aplicar automaticamente estos estilos desde nuestro editor
+Para aplicar este check automáticamente instalamos un formateador de código llamado [prettier](https://prettier.io/) a través del cual podremos aplicar automáticamente estos estilos desde nuestro editor
 
 Asi que instalamos nuestras dependencias... 
 
 ```
-  npm i -S babel-eslint eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard prettier-eslint
+  npm i -S \
+    babel-eslint \
+    eslint-config-standard \
+    eslint-plugin-import \
+    eslint-plugin-node \
+    eslint-plugin-promise \
+    eslint-plugin-standard \
+    prettier-eslint
 ```
 
 Creamos y configuramos el `.eslintrc`
