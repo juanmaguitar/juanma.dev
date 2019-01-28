@@ -8,7 +8,7 @@ module.exports = {
     subtitle:
       'Hola, soy JuanMa! En este blog iré compartiendo notas y descubrimientos relacionados con Javascript',
     copyright: '© All rights reserved.',
-    disqusShortname: '',
+    disqusShortname: 'https-apuntesjs-es',
     menu: [
       {
         label: 'Articles',
@@ -117,7 +117,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-google-analytics',
-      options: { trackingId: 'UA-73379983-2' },
+      options: { trackingId: 'UA-133311526-1' },
     },
     {
       resolve: 'gatsby-plugin-google-fonts',
