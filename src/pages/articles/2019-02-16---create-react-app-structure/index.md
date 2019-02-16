@@ -1,6 +1,6 @@
 ---
 title: "Cómo estructurar tus componentes con create-react-app"
-date: "2019-01-26T22:12:03.284Z"
+date: "2019-02-16T22:12:03.284Z"
 layout: post
 draft: false
 path: "/posts/estructurar-componentes-create-react-app"
