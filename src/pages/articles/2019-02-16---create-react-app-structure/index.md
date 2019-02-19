@@ -12,8 +12,6 @@ tags:
 description: "Cómo estructurar tus componentes con create-react-app"
 ---
 
-# Cómo estructurar tus componentes con `create-react-app`
-
 La estructura que queremos conseguir es esta 
 
 ```

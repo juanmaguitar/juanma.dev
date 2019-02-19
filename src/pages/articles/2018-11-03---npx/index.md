@@ -1,5 +1,5 @@
 ---
-title: "NPX"
+title: "Qué es y para que sirve NPX"
 date: "2018-11-03T22:12:03.284Z"
 layout: post
 draft: false

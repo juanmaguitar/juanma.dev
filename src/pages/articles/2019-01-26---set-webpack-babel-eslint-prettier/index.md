@@ -13,8 +13,6 @@ tags:
 description: "Cómo configurar nuestros proyectos para trabajar con Webpack, Babel 7, ESLint y Prettier"
 ---
 
-# Webpack
-
 ## Webpack: Configuración Básica
 
 Para configurar un proyecto preparado para trabajar con javascript "moderno", tenemos que crear nuestro `package.json`, instalar una serie de dependencias y configurar webpack para poder importar módulos JS ES2015 y lanzar nuestro servidor local que se recargará automáticamente cuando grabemos.
