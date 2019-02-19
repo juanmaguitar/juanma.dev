@@ -1,5 +1,5 @@
 ---
-title: "Cómo resproducir y debugear un bug de una webapp en Chrome dentro de un Android desde Mac"
+title: "Cómo reproducir y debugear un bug de una webapp en Chrome dentro de un Android desde Mac"
 date: "2019-02-18T22:12:03.284Z"
 layout: post
 draft: false
@@ -10,10 +10,8 @@ tags:
   - webapp
   - chrome
   - mac
-description: "Cómo resproducir y debugear un bug de una webapp en Chrome dentro de un Android desde Mac"
+description: "Cómo reproducir y debugear un bug de una webapp en Chrome dentro de un Android desde Mac"
 ---
-
-# Cómo arreglar un bug de una webapp en Chrome dentro de un Android desde Mac
 
 Si eres desarrollador web, trabajas en Mac, tienes iPhone y de repente alguien detecta en tu proyecto web un bug que sólo pasa en Android, reproducirlo, debugearlo y arreglarlo se puede convertir en una odisea.
 
@@ -35,7 +33,7 @@ Una vez instalado, tenemos disponibles diferentes emuladores bajo el nombre de A
 
 Una vez creado el dispositivo Android que necesitemos, lo lanzamos y veremos algo como esto
 
-<video poster="https://developer.android.com/studio/videos/home/emulator-ar-poster.png" autoplay="" loop="" muted="" class="block"><source src="https://developer.android.com/studio/videos/home/emulator-ar.mp4?hl=es-419" type="video/mp4"></video>
+![android-emulador](./img/android-emulador.png)
 
 ## Accediendo a nuestro servidor local desde el emulador
 
