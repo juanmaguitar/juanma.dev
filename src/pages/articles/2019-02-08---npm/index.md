@@ -1,5 +1,5 @@
 ---
-title: "La caché de NPM"
+title: "Reinstalación limpia de paquetes NPM"
 date: "2019-02-08T22:12:03.284Z"
 layout: post
 draft: false
@@ -8,7 +8,7 @@ category: "npm"
 tags:
   - npm
   - cache
-description: "La caché de NPM"
+description: "Reinstalación limpia de paquetes NPM"
 ---
 
 # NPM
@@ -36,7 +36,7 @@ Pero también, puede ser un problema si lo que queremos es instalar una última 
 
 Por otro lado, NPM mantiene una cache interna en la que almacena las versiones ya instaladas de paquetes por lo que es posible que si intentamos instalar una última versión recién publicada de un paquete que ya teniamos, nos instale todo el rato la versión que ya teníamos (porque la sirve de su caché)
 
-## Reinstalación limpia de paquetes NPM
+## 👉 Reinstalación limpia de paquetes NPM
 
 Teniendo esto en cuenta, para hacer una instalación limpia en NPM podemos hacer...
 
