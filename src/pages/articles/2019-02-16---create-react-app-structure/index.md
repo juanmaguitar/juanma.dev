@@ -1,5 +1,5 @@
 ---
-title: "Cómo estructurar tus componentes con create-react-app"
+title: "Cómo estructurar tus componentes con create-react-app para simplificar sus import"
 date: "2019-02-16T22:12:03.284Z"
 layout: post
 draft: false
@@ -9,7 +9,7 @@ tags:
   - react
   - create-react-app
   - components
-description: "Cómo estructurar tus componentes con create-react-app"
+description: "Cómo estructurar tus componentes con create-react-app para que sean más escalables y para evitar rutas relativas en los import"
 ---
 
 La estructura que queremos conseguir es esta 
