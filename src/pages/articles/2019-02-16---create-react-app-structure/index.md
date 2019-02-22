@@ -4,7 +4,7 @@ date: "2019-02-16T22:12:03.284Z"
 layout: post
 draft: false
 path: "/posts/estructurar-componentes-create-react-app"
-category: "webpack"
+category: "react"
 tags:
   - react
   - create-react-app

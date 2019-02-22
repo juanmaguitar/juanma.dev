@@ -17,7 +17,10 @@ En Visual Code hay un plugin muy útil llamado [Live Server](https://marketplace
 
 Con este plugin podemos servir cualquier página en un servidor local directamente desde Visual Code
 
+- Desde este botón que tendremos en la barra de abajo
 ![go live](./img/go-live.png)
+
+- O desde la paleta de comandos (buscando _Live Server_)
 ![paleta comandos](./img/paleta-comandos.png)
 
 A veces, nos encontramos que después de lanzar el servidor una vez, el proceso se ha quedado abierto escuchando en el puerto por defecto y nos sale este error
