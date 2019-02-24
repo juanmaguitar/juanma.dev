@@ -12,13 +12,13 @@ tags:
 description: "¿Qué diferencia hay entre data y computed en Vue?"
 ---
 
-En Vue [podemos definir para cada componente (o instancia Vue) un conjunto de datos](https://vuejs.org/v2/guide/instance.html#Data-and-Methods) (bajo la propiedad `data`) para que estén disponibles (de manera reactiva) tanto en sus métodos como en el template
+En Vue [podemos definir para cada componente (o instancia Vue) un conjunto de datos](https://vuejs.org/v2/guide/instance.html#Data-and-Methods) (bajo la propiedad [`data`](https://vuejs.org/v2/guide/instance.html#Data-and-Methods)) para que estén disponibles (de manera reactiva) tanto en sus métodos como en el template
 
-Pero también podemos reaccionar aplicando cierta lógica para dejar disponibles ciertos valores _computados_ definiéndolos bajo la propiedad [`computed`](https://vuejs.org/v2/guide/computed.html) que también reacciona cuando cambian los datos
+Pero también podemos reaccionar aplicando cierta lógica para [dejar disponibles ciertos valores _computados_](https://vuejs.org/v2/guide/computed.html) definiéndolos bajo la propiedad [`computed`](https://vuejs.org/v2/guide/computed.html) que también reacciona cuando cambian los datos
 
 Vamos a ver un poco más en detalle cuando aplicar uno u otro
 
-## `data`
+## [`data`](https://vuejs.org/v2/guide/instance.html#Data-and-Methods)
 
 Cuando se crea una instancia Vue (o se monta un componente), todas las propiedades que encuentra bajo la propiedad `data` son añadidas al sistema reactivo de Vue → cuando los valores de estas propiedades cambian, la vista _reacciona_ actualizando sus valores para que se correspondan con estos nuevos valores
 
