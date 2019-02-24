@@ -123,3 +123,9 @@ Además, si lo que queremos es _computar_ datos a partir de valores que nos veng
 
 
 <iframe src="https://codesandbox.io/embed/5mr33rkmkk?codemirror=1&fontsize=14" style="width: 100%; margin-left: auto ; margin-right: auto; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
+### Recursos
+
+- [What is the differences between data and computed? | Forum Vue](https://forum.vuejs.org/t/what-is-the-differences-between-data-and-computed/2950/2)
+- [Data and Methods](https://vuejs.org/v2/guide/instance.html#Data-and-Methods)
+- [Computed Properties and Watchers](https://vuejs.org/v2/guide/computed.html)
