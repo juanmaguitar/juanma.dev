@@ -122,4 +122,4 @@ para luego poder hacer (elegantemente) en el template...
 Además, si lo que queremos es _computar_ datos a partir de valores que nos vengan vía props, no nos queda otra que definirlos en `computed` si no no funcionará
 
 
-<iframe src="https://codesandbox.io/embed/5mr33rkmkk?codemirror=1&fontsize=14" style="max-width: 40rem; margin-left: auto ; margin-right: auto; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+<iframe src="https://codesandbox.io/embed/5mr33rkmkk?codemirror=1&fontsize=14" style="width: 100%; margin-left: auto ; margin-right: auto; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
