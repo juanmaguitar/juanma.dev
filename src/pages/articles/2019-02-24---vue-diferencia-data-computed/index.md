@@ -54,7 +54,6 @@ export default {
     changeMsg(e) {
       const { msg } = e.target.dataset;
       this.selectedMessage = msg;
-      this.onTheFlySelectedMessage = msg
     }
   }
 };
